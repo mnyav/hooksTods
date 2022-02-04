@@ -2,8 +2,7 @@ import "./list.css"
 const List = ({ state, onToogleTop, onDeleteItem }) => {
 
 
-
-    const newArr = state.map((item, i) => {
+    const newArr = state.map((item) => {
 
 
 

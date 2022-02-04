@@ -4,7 +4,6 @@ import SeacrchPanel from "../seacrchPanel/seacrchPanel"
 import List from "../list/list"
 import AddEmployee from "../addEmployee/addEmployee"
 import { useState } from "react"
-import { Provider } from "react-redux"
 
 const App = () => {
 
@@ -27,7 +26,6 @@ const App = () => {
 
     const [RiseState, setRiseState] = useState(arr.riseItems);
 
-    console.log(RiseState);
 
 
     const seacrchWorkers = (data, filterTerm) => {
