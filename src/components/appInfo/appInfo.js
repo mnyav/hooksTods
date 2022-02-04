@@ -3,8 +3,8 @@ import "./appInfo.css"
 
 const AppInfo = ({ state }) => {
     const rise = state.filter((item) => {
-        if (item.top) {
-            return item.top
+        if (item.rise) {
+            return item.rise
         }
     })
     const active = state.filter((item) => {

@@ -8,18 +8,15 @@ const SeacrchPanel = ({ updateSeacrch, addRise, setRiseState, addActive }) => {
 
     const [inputValue, setInputValue] = useState("")
 
-    console.log(inputValue);
     useEffect(() => {
         updateSeacrch(inputValue)
     }, [inputValue])
 
-    const changeInput = (e) => {
-        setInputValue(e.target.value)
-    }
+
     return (
         <div className="seacrchPanel">
             <input
-                onChange={changeInput}
+                onChange={(e) => setInputValue(e.target.value)}
                 className="form-control form-control-lg"
                 type="text"
                 value={inputValue}

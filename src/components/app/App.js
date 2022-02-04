@@ -7,24 +7,20 @@ import { useState } from "react"
 
 const App = () => {
 
-    const arr = {
-        data: [
-            { id: 1, name: "Tom", cash: 1900, active: true, top: false },
-            { id: 2, name: "Bob", cash: 2309, active: false, top: true },
-            { id: 3, name: "Artur", cash: 909, active: false, top: true },
-            { id: 4, name: "Tomas", cash: 499, active: true, top: false }
-        ],
-        filterTerm: "",
-        riseItems: []
+    const data = [
+        { id: 1, name: "Tom", cash: 1900, active: true, rise: false },
+        { id: 2, name: "Bob", cash: 2309, active: false, rise: true },
+        { id: 3, name: "Artur", cash: 909, active: false, rise: true },
+        { id: 4, name: "Tomas", cash: 499, active: true, rise: false }
+    ]
+    const filterTerm = ""
+    const riseItems = []
 
-    }
+    const [state, setState] = useState(data);
 
+    const [filterState, setFilterState] = useState(filterTerm);
 
-    const [state, setState] = useState(arr.data);
-
-    const [filterState, setFilterState] = useState(arr.filterTerm);
-
-    const [RiseState, setRiseState] = useState(arr.riseItems);
+    const [RiseState, setRiseState] = useState(riseItems);
 
 
 
@@ -69,8 +65,8 @@ const App = () => {
     const addRise = () => {
 
         const filt = sortState.filter((item) => {
-            if (item.top) {
-                return item.top
+            if (item.rise) {
+                return item.rise
             }
         })
         setRiseState(filt);

@@ -4,22 +4,17 @@ const List = ({ state, onToogleTop, onDeleteItem }) => {
 
     const newArr = state.map((item) => {
 
-
-
         let classNames = "list-group-item d-flex justify-content-between";
-        if (item.top) {
-            classNames += ' increase';
-        }
-        if (item.active) {
-            classNames += ' like';
-        }
+        if (item.top) (classNames += ' increase')
+        if (item.active) (classNames += ' like')
 
         return (
             <li
 
                 key={item.id + item.name}
                 className={classNames}>
-                <span onClick={(e) => onToogleTop(item.id, e.currentTarget.getAttribute('data-toggle'))} data-toggle="top"
+                <span onClick={(e) => onToogleTop(item.id, e.currentTarget.getAttribute('data-toggle'))}
+                    data-toggle="top"
                     className="list-group-item-label">{item.name}</span>
                 <span className="list-group-item-input">{item.cash}$</span>
                 <div className='d-flex justify-content-center align-items-center'>
