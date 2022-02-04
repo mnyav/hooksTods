@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hooksTods/static/css/main.04b7b62b.css",
+    "main.js": "/hooksTods/static/js/main.da5126ca.js",
+    "index.html": "/hooksTods/index.html",
+    "main.04b7b62b.css.map": "/hooksTods/static/css/main.04b7b62b.css.map",
+    "main.da5126ca.js.map": "/hooksTods/static/js/main.da5126ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04b7b62b.css",
+    "static/js/main.da5126ca.js"
+  ]
+}
